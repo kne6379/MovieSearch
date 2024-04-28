@@ -21,17 +21,15 @@ fetch(
 )
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
     let makeData = data.results.map((index) => {
       return {
         id: index.id,
         title: index.title,
         overview: index.overview,
         poster_path: index.poster_path,
-        vote_average: index.vote_average,
+        vote_average: Math.ceil(index.vote_average * 10) / 10,
       };
     });
-    console.log(makeData);
     makeCard(makeData);
   })
   .catch((err) => console.error(err));
@@ -49,6 +47,12 @@ let makeCard = (resData) => {
     </div>`;
     $main.insertAdjacentHTML("beforeend", temp_html);
   });
+};
+
+const enterKey = () => {
+  if (window.event.keyCode == 13) {
+    Search();
+  }
 };
 
 function Search() {
