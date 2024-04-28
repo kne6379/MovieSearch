@@ -1,0 +1,53 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(sample1.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 2%;
+  justify-content: center;
+}
+header h1 {
+  margin-right: 30px;
+}
+.mb-3 {
+  width: 30%;
+}
+/* #titleSearch {
+  width: 300px;
+} */
+
+.card {
+  width: 300px;
+  border-style: none;
+  background-color: transparent;
+  margin-bottom: 10px;
+  color: transparent;
+}
+
+.card:hover {
+  color: white;
+}
+.card img {
+  width: 300px;
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card:hover img {
+  filter: brightness(30%);
+}
